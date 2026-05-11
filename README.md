@@ -108,6 +108,23 @@ Number of **contrastive pairs** (entries with `sys ≠ sys_perturbed`, i.e. `Lev
 
 Pronoun perturbations are concentrated on en→fr because the gender-of-anaphoric-pronouns phenomenon is most reliably detectable in French (rich morphology and direct gender-marked pronouns *il / elle / ils / elles*). They are excluded from the main evaluation in the paper due to insufficient instances in en→es and en→de.
 
+Number of **source documents** that contribute at least one perturbed segment to each category (a document is counted once per perturbation type):
+
+| Perturbation | en→fr Aya23 | en→fr Gemini | en→es Aya23 | en→es Gemini | en→de Aya23 | en→de Gemini |
+|---|---:|---:|---:|---:|---:|---:|
+| tense_consistency | 80 | 60 | 57 | 67 | 64 | 76 |
+| lexical_consistency | 59 | 54 | 70 | 70 | 48 | 55 |
+| conjunction_substitution | 82 | 80 | 93 | 96 | 101 | 110 |
+| pronoun_swap_singular | 8 | 5 | — | — | 2 | 4 |
+| pronoun_swap_plural | 10 | 8 | — | 1 | — | — |
+| sentence_repetition | 149 | 150 | 143 | 143 | 141 | 150 |
+| sentence_removal | 149 | 150 | 143 | 143 | 141 | 150 |
+| sentence_shuffling | 58 | 58 | 57 | 55 | 54 | 58 |
+| sentence_splitting | 22 | 13 | 14 | 22 | 14 | 15 |
+| **distinct documents (union)** | **149** | **150** | **143** | **143** | **141** | **150** |
+
+The structural perturbations *sentence_repetition* and *sentence_removal* apply to every available document, so their per-system counts coincide with the per-system union over all perturbation types.
+
 Documents have an average length of **11.3 segments** after sentence-level alignment with `bertalign`. Across all 6 (language pair, system) files: **8,705 contrastive pairs** in total, drawn from **54,358 segment-level entries** (the remaining entries have `sys == sys_perturbed` and serve as unperturbed context for sliding-window evaluation — see *Data format* note above and *Reproducing other window sizes* below).
 
 
