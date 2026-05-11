@@ -1,0 +1,13 @@
+# Private metric snapshot — kept locally, not published.
+scores/
+
+# Python build artefacts
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/

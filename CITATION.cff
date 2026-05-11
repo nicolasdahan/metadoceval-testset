@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite the following paper."
+title: "MetaDocEval: A Document-Level Contrastive Test Set for MT Metric Evaluation"
+type: dataset
+authors:
+  - family-names: Dahan
+    given-names: Nicolas
+    affiliation: "Inria Paris, France; Sorbonne Université, CNRS, ISIR, Paris, France"
+    email: nicolas.dahan@inria.fr
+  - family-names: Bawden
+    given-names: Rachel
+    affiliation: "Inria Paris, France"
+  - family-names: Yvon
+    given-names: François
+    affiliation: "Sorbonne Université, CNRS, ISIR, Paris, France"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "MetaDocEval: A Contrastive Framework for Evaluating Machine Translation Metrics at the Document-Level"
+  authors:
+    - family-names: Dahan
+      given-names: Nicolas
+    - family-names: Bawden
+      given-names: Rachel
+    - family-names: Yvon
+      given-names: François
+  conference:
+    name: "26th Annual Conference of the European Association for Machine Translation (EAMT 2026)"
+    city: "Tilburg"
+    country: "NL"
+    date-start: 2026-06-15
+    date-end: 2026-06-18
+  year: 2026
