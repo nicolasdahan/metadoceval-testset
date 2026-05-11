@@ -10,7 +10,7 @@ The data covers three language pairs (en→fr, en→es, en→de), two MT systems
 If you use this test set, please cite:
 
 ```bibtex
-@inproceedings{dahan-bawden-yvon-2026-metadoceval,
+@inproceedings{dahan-etal-2026-metadoceval,
     title     = {MetaDocEval: A Contrastive Framework for Evaluating Machine Translation Metrics at the Document-Level},
     author    = {Dahan, Nicolas and Bawden, Rachel and Yvon, Fran\c{c}ois},
     booktitle = {Proceedings of the 26th Annual Conference of the European Association for Machine Translation},
@@ -91,24 +91,24 @@ Notes:
 
 ## Statistics
 
-Number of contrastive instances per perturbation type and (language pair, system):
+Number of **contrastive pairs** (entries with `sys ≠ sys_perturbed`, i.e. `Levenshtein > 0`) per perturbation type and (language pair, system):
 
 | Perturbation | en→fr Aya23 | en→fr Gemini | en→es Aya23 | en→es Gemini | en→de Aya23 | en→de Gemini |
 |---|---:|---:|---:|---:|---:|---:|
-| tense_consistency | 1,341 | 1,031 | 968 | 1,198 | 1,006 | 1,155 |
-| lexical_consistency | 1,170 | 1,069 | 1,243 | 1,227 | 946 | 1,081 |
-| conjunction_substitution | 1,332 | 1,313 | 1,388 | 1,417 | 1,388 | 1,553 |
-| pronoun_swap_singular | 177 | 100 | — | — | 25 | 117 |
-| pronoun_swap_plural | 438 | 372 | — | 6 | — | — |
-| sentence_repetition | 1,826 | 1,818 | 1,746 | 1,742 | 1,653 | 1,798 |
-| sentence_removal | 1,826 | 1,818 | 1,746 | 1,742 | 1,653 | 1,798 |
-| sentence_shuffling | 1,291 | 1,275 | 1,262 | 1,239 | 1,145 | 1,264 |
-| sentence_splitting | 507 | 374 | 397 | 614 | 301 | 462 |
-| **total** | **9,908** | **9,170** | **8,750** | **9,185** | **8,117** | **9,228** |
+| tense_consistency | 193 | 119 | 118 | 169 | 138 | 160 |
+| lexical_consistency | 150 | 150 | 205 | 195 | 122 | 135 |
+| conjunction_substitution | 181 | 167 | 270 | 258 | 311 | 346 |
+| pronoun_swap_singular | 9 | 5 | — | — | 2 | 5 |
+| pronoun_swap_plural | 19 | 11 | — | 1 | — | — |
+| sentence_repetition | 334 | 332 | 320 | 318 | 298 | 327 |
+| sentence_removal | 334 | 332 | 320 | 318 | 298 | 327 |
+| sentence_shuffling | 220 | 224 | 222 | 216 | 192 | 216 |
+| sentence_splitting | 27 | 20 | 16 | 24 | 15 | 16 |
+| **total** | **1,467** | **1,360** | **1,471** | **1,499** | **1,376** | **1,532** |
 
 Pronoun perturbations are concentrated on en→fr because the gender-of-anaphoric-pronouns phenomenon is most reliably detectable in French (rich morphology and direct gender-marked pronouns *il / elle / ils / elles*). They are excluded from the main evaluation in the paper due to insufficient instances in en→es and en→de.
 
-Documents have an average length of **11.3 segments** after sentence-level alignment with `bertalign`. Total: 54,358 contrastive instances over 6 (language pair, system) files.
+Documents have an average length of **11.3 segments** after sentence-level alignment with `bertalign`. Across all 6 (language pair, system) files: **8,705 contrastive pairs** in total, drawn from **54,358 segment-level entries** (the remaining entries have `sys == sys_perturbed` and serve as unperturbed context for sliding-window evaluation — see *Data format* note above and *Reproducing other window sizes* below).
 
 
 ## Usage
