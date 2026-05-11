@@ -102,8 +102,8 @@ Number of **contrastive pairs** (entries with `sys ≠ sys_perturbed`, i.e. `Lev
 | pronoun_swap_plural | 19 | 11 | — | 1 | — | — |
 | sentence_repetition | 334 | 332 | 320 | 318 | 298 | 327 |
 | sentence_removal | 334 | 332 | 320 | 318 | 298 | 327 |
-| sentence_shuffling | 220 | 224 | 222 | 216 | 192 | 216 |
-| sentence_splitting | 27 | 20 | 16 | 24 | 15 | 16 |
+| sentence_shuffling | 334 | 332 | 320 | 318 | 298 | 327 |
+| sentence_splitting | 122 | 113 | 114 | 122 | 114 | 115 |
 | **total** | **1,467** | **1,360** | **1,471** | **1,499** | **1,376** | **1,532** |
 
 Pronoun perturbations are concentrated on en→fr because the gender-of-anaphoric-pronouns phenomenon is most reliably detectable in French (rich morphology and direct gender-marked pronouns *il / elle / ils / elles*). They are excluded from the main evaluation in the paper due to insufficient instances in en→es and en→de.
@@ -119,8 +119,8 @@ Number of **source documents** that contribute at least one perturbed segment to
 | pronoun_swap_plural | 10 | 8 | — | 1 | — | — |
 | sentence_repetition | 149 | 150 | 143 | 143 | 141 | 150 |
 | sentence_removal | 149 | 150 | 143 | 143 | 141 | 150 |
-| sentence_shuffling | 58 | 58 | 57 | 55 | 54 | 58 |
-| sentence_splitting | 22 | 13 | 14 | 22 | 14 | 15 |
+| sentence_shuffling | 149 | 150 | 143 | 143 | 141 | 150 |
+| sentence_splitting | 122 | 113 | 114 | 122 | 114 | 115 |
 | **distinct documents (union)** | **149** | **150** | **143** | **143** | **141** | **150** |
 
 The structural perturbations *sentence_repetition* and *sentence_removal* apply to every available document, so their per-system counts coincide with the per-system union over all perturbation types.
